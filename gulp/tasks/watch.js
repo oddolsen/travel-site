@@ -22,7 +22,7 @@ gulp.task('watch', function() {
 
 });
 
-//gulp cssInject
+//Ser till att ändingar i css ses i direkt
 gulp.task('cssInject', ['styles'], function() {
     return gulp.src('./app/temp/styles/styles.css')
         .pipe(browserSync.stream());

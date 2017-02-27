@@ -470,6 +470,10 @@ img {
     height: auto;
 }
 
+/*
+https://benfraincom/creating-and-referencing-javascript-mixins-and-variables-with-postcss/ 
+*/
+
 .large-hero {
     border-bottom: 10px solid #2f5572;
     position: relative;
@@ -574,13 +578,87 @@ img {
     margin-right: auto;
 }
 
+.wrapper--medium {
+  max-width: 976px;
+}
+
+/*Om en wrapper finns i en annan wrapper
+      så ta bort padding left och right i wrappern*/
+
+.wrapper .wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .page-section {
+    padding: 1.2rem 0;
+}
+
+@media (min-width: 800px) {
+
+  .page-section {
     padding: 4.5rem 0;
+  }
 }
 
 .page-section--blue {
   background-color: #2f5572;
   color: #fff;
+}
+
+.headline {
+    font-weight: 300;
+    font-size: 1.7rem;
+    color: #2f5572;
+
+}
+
+@media (min-width: 530px) {
+
+  .headline {
+    font-size: 2.875rem;
+  }
+}
+
+.headline--centered {
+  text-align: center;
+}
+
+.headline--orange {
+  color: #d59541;
+}
+
+.headline--small {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 530px) {
+
+  .headline--small {
+    font-size: 1.875rem;
+  }
+}
+
+.headline--narrow {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headline--light {
+  font-weight: 100;
+}
+
+.headline strong {
+  font-weight: 400;
+}
+
+.headline--b-margin-small {
+  margin-bottom: 0.5em;
+}
+
+.headline--b-margin-large {
+  margin-bottom: 1.8em;
 }
 
 

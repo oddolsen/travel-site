@@ -4,4 +4,15 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    &--medium {
+        max-width: 976px;
+    }
+
+    /*Om en wrapper finns i en annan wrapper
+      så ta bort padding left och right i wrappern*/
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
