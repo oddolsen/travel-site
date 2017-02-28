@@ -19,3 +19,11 @@ https://benfraincom/creating-and-referencing-javascript-mixins-and-variables-wit
     @mixin-content;
   }
 }
+
+@define-mixin clearfix { 
+  &::after { /*Fix floating end*/
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
