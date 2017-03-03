@@ -10,7 +10,15 @@
         padding-right: 65px;
     }
 
+    &__b-margin-untill-medium {
+        margin-bottom: 1rem;
+    }
+
     @mixin atMedium {
+        &__b-margin-untill-medium {
+            margin-bottom: 0;
+        }
+
         &__medium-4 { /*Collumn span 4*/
             float: left;
             width: 33.33%;
@@ -32,5 +40,7 @@
             float: left;
             width: 63%;
         }
+
+
     }
 } 
