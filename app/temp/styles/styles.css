@@ -885,8 +885,21 @@ a {
 }
 
 .testimonial {
-    background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .8);
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px;
+}
+
+@media (min-width: 1200px) {
+
+  .testimonial {
+    margin-bottom: 0;
     padding: 0 1.8125rem 1px 1.8125rem;
+  }
+}
+
+.testimonial--last {
+  margin-bottom: 0;
 }
 
 .testimonial__photo {
@@ -897,7 +910,7 @@ a {
   margin: 0 auto -80px auto;
   position: relative;
   top: -80px;
-  border: solid rgba(255, 255, 255, .8);
+  border: 6px solid rgba(255, 255, 255, .8);
 }
 
 .testimonial__title {
@@ -911,9 +924,9 @@ a {
 .testimonial__subtitle {
   color: #d59541;
   text-align: center;
-  font-size: 0.93rem;
   font-weight: 400;
-  margin: 0.25rem 0 1rem 0;
+  font-size: 0.9375rem;
+  margin: .25rem 0 1rem 0;
 }
 
 
