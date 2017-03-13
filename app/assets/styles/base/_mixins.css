@@ -1,7 +1,3 @@
-/*
-https://benfraincom/creating-and-referencing-javascript-mixins-and-variables-with-postcss/ 
-*/
-
 @define-mixin atSmall {
   @media (min-width: 530px) {
     @mixin-content;
@@ -15,13 +11,13 @@ https://benfraincom/creating-and-referencing-javascript-mixins-and-variables-wit
 }
 
 @define-mixin atLarge {
-  @media (min-width: 1200px) {
+  @media (min-width: 1010px) {
     @mixin-content;
   }
 }
 
-@define-mixin clearfix { 
-  &::after { /*Fix floating end*/
+@define-mixin clearfix {
+  &::after {
     content: "";
     clear: both;
     display: table;

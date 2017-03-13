@@ -460,31 +460,28 @@ template {
   display: none;
 }
 
-/*
-https://benfraincom/creating-and-referencing-javascript-mixins-and-variables-with-postcss/ 
-*/
-
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    color: #d59541;
+  color: #d59541;
 }
 
 .large-hero {
-    border-bottom: 10px solid #2f5572;
-    position: relative;
+  border-bottom: 10px solid #2f5572;
+  position: relative;
+
 }
 
 .large-hero__image {
@@ -505,15 +502,7 @@ a {
   font-weight: 300;
   color: #2f5572;
   margin: 0;
-  font-size: 2.4rem;/* 
-        @mixin atMedium {
-        font-size: 5.8rem;
-        }
-
-        @mixin atLarge {
-        font-size: 4.8rem;
-        }
-*/
+  font-size: 2.4rem;
 }
 
 @media (min-width: 530px) {
@@ -526,8 +515,8 @@ a {
 .large-hero__subtitle {
   font-weight: 300;
   color: #2f5572;
-  margin: 0;
   font-size: 1.5rem;
+  margin: 0;
 }
 
 @media (min-width: 530px) {
@@ -538,10 +527,10 @@ a {
 }
 
 .large-hero__description {
-  font-weight: 100;
   color: #FFF;
   font-size: 1.1rem;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  font-weight: 100;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
   max-width: 30rem;
   margin-left: auto;
   margin-right: auto;
@@ -555,44 +544,68 @@ a {
 }
 
 .btn {
-    background-color: #2f5572;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.75rem 1.2rem;
-    display: inline-block;
+  background-color: #2f5572;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+
 }
 
 .btn--orange {
   background-color: #d59541;
 }
 
-.btn--large {/*font-size: 1.25rem;*/
-  padding: 0.7rem 1.4rem;
+.btn--large {
+  padding: 1.1rem 1.9rem;
 }
 
 @media (min-width: 530px) {
 
   .btn--large {
     font-size: 1.25rem;
-    padding: 1.1rem 1.9rem;
   }
 }
 
 .wrapper {
-    overflow: hidden;
-    padding-left: 18px;
-    padding-right: 18px;
-    max-width: 1236px;
-    margin-left: auto;
-    margin-right: auto;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1236px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .wrapper--medium {
   max-width: 976px;
 }
 
-/*Om en wrapper finns i en annan wrapper
-      så ta bort padding left och right i wrappern*/
+.wrapper--no-padding-until-medium {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 800px) {
+
+  .wrapper--no-padding-until-medium {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.wrapper--no-padding-until-large {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .wrapper--no-padding-until-large {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
 
 .wrapper .wrapper {
   padding-left: 0;
@@ -611,7 +624,8 @@ a {
 }
 
 .page-section {
-    padding: 1.2rem 0;
+  padding: 1.2rem 0;
+
 }
 
 @media (min-width: 800px) {
@@ -621,16 +635,38 @@ a {
   }
 }
 
-.page-section--blue {
-  background-color: #2f5572;
-  color: #fff;
-}
-
-.page-section--testimonials {
-  background-color: lightblue;
+.page-section--no-b-padding-until-medium {
+  padding-bottom: 0;
 }
 
 @media (min-width: 800px) {
+
+  .page-section--no-b-padding-until-medium {
+    padding-bottom: 4.5rem;
+  }
+}
+
+.page-section--no-b-padding-until-large {
+  padding-bottom: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .page-section--no-b-padding-until-large {
+    padding-bottom: 4.5rem;
+  }
+}
+
+.page-section--blue {
+  background-color: #2f5572;
+  color: #FFF;
+}
+
+.page-section--testimonials {
+  background-color: #e0e6ef;
+}
+
+@media (min-width: 1010px) {
 
   .page-section--testimonials {
     background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
@@ -639,11 +675,9 @@ a {
 }
 
 .headline {
-    font-weight: 300;
-    font-size: 1.7rem;
-    color: #2f5572;
-
-
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #2f5572;
 }
 
 @media (min-width: 530px) {
@@ -687,18 +721,18 @@ a {
 }
 
 .headline--b-margin-small {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
 
 .headline--b-margin-large {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.6em;
 }
 
 .headline--no-t-margin {
   margin-top: 0;
 }
 
-.row::after {/*Fix floating end*/
+.row::after {
   content: "";
   clear: both;
   display: table;
@@ -712,61 +746,91 @@ a {
   margin-right: -65px;
 }
 
-.row--gutters-small {
-  margin-right: -45px;
-}
-
 .row--gutters-large {
   margin-right: -100px;
 }
 
-.row--gutters>div {
+.row--gutters-small {
+  margin-right: -45px;
+}
+
+.row--gutters > div {
   padding-right: 65px;
 }
 
-.row--gutters-small>div {
-  padding-right: 45px;
-}
-
-.row--gutters-large>div {
+.row--gutters-large > div {
   padding-right: 100px;
 }
 
-.row__b-margin-untill-medium {
+.row--gutters-small > div {
+  padding-right: 45px;
+}
+
+.row__b-margin-until-medium {
   margin-bottom: 1rem;
 }
 
 @media (min-width: 800px) {
 
-  .row__b-margin-untill-medium {
+  .row__b-margin-until-medium {
     margin-bottom: 0;
   }
 
-  .row__medium-4 {/*Collumn span 4*/
+  .row__medium-4 {
     float: left;
     width: 33.33%;
   }
 
-  .row__medium-4--larger {/*Collumn span 4*/
-    float: left;
+  .row__medium-4--larger {
     width: 37%;
   }
 
-  .row__medium-6 {/*Collumn span 6*/
+  .row__medium-6 {
     float: left;
     width: 50%;
   }
 
-  .row__medium-8 {/*Collumn span 8*/
+  .row__medium-8 {
     float: left;
     width: 66.66%;
   }
 
-  .row__medium-8--larger {/*Collumn span 8*/
-    float: left;
+  .row__medium-8--smaller {
     width: 63%;
   }
 }
+
+@media (min-width: 1010px) {
+
+  .row__b-margin-until-large {
+    margin-bottom: 0;
+  }
+
+  .row__large-4 {
+    float: left;
+    width: 33.33%;
+  }
+
+  .row__large-4--larger {
+    width: 37%;
+  }
+
+  .row__large-6 {
+    float: left;
+    width: 50%;
+  }
+
+  .row__large-8 {
+    float: left;
+    width: 66.66%;
+  }
+
+  .row__large-8--smaller {
+    width: 63%;
+  }
+}
+
+/* Begin Equal Height Rules */
 
 @media (min-width: 800px) {
 
@@ -778,6 +842,22 @@ a {
 }
 
 .row--equal-height-at-medium > div {
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 1010px) {
+
+  .row--equal-height-at-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.row--equal-height-at-large > div {
   float: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -890,7 +970,7 @@ a {
   margin-bottom: 98px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1010px) {
 
   .testimonial {
     margin-bottom: 0;
@@ -929,8 +1009,81 @@ a {
   margin: .25rem 0 1rem 0;
 }
 
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
 
+.icon {
+      background-image: url('/assets/images/sprites/sprite-0f9283b3.svg');
+    }
 
+.icon--clear-view-escapes {
+    width: 142.4px;
+    height: 59.53px;
+    background-position: 0 0;
+  }
 
+.icon--comment {
+    width: 64px;
+    height: 64px;
+    background-position: 99.70443349753694% 0;
+  }
 
+.icon--facebook {
+    width: 21.23px;
+    height: 42.01px;
+    background-position: 26.040607071652357% 45.795830448496034%;
+  }
 
+.icon--fire {
+    width: 56px;
+    height: 64px;
+    background-position: 0 99.56481481481481%;
+  }
+
+.icon--globe {
+    width: 64px;
+    height: 64px;
+    background-position: 27.586206896551722% 99.56481481481481%;
+  }
+
+.icon--instagram {
+    width: 42.01px;
+    height: 42.01px;
+    background-position: 63.2917018534157% 49.234556504346486%;
+  }
+
+.icon--mail {
+    width: 64px;
+    height: 48px;
+    background-position: 0 48.00806451612903%;
+  }
+
+.icon--rain {
+    width: 64px;
+    height: 64px;
+    background-position: 99.70443349753694% 59.25925925925926%;
+  }
+
+.icon--star {
+    width: 64px;
+    height: 64px;
+    background-position: 59.11330049261084% 99.56481481481481%;
+  }
+
+.icon--twitter {
+    width: 51.78px;
+    height: 42.06px;
+    background-position: 94.04330452560171% 98.50700323226104%;
+  }
+
+.icon--wifi {
+    width: 60px;
+    height: 64px;
+    background-position: 68.79227053140097% 0;
+  }
+
+.icon--youtube {
+    width: 34.75px;
+    height: 42px;
+    background-position: 36.69752421959096% 45.792307692307695%;
+  }
