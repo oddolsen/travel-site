@@ -489,6 +489,7 @@ a {
 }
 
 .large-hero__text-content {
+  padding-top: 88px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -496,6 +497,13 @@ a {
   left: 0;
   width: 100%;
   text-align: center;
+}
+
+@media (min-width: 800px) {
+
+  .large-hero__text-content {
+    padding-top: 60px;
+  }
 }
 
 .large-hero__title {
@@ -1178,6 +1186,10 @@ Instead edit gulp/templates/sprite */
   .site-header__menu-content {
     display: block;
   }
+}
+
+.site-header__menu-content--is-visible {
+  display: block;
 }
 
 .primary-nav--pull-right {
